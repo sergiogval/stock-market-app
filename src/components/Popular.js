@@ -5,17 +5,22 @@ import GobakcBtn from "./GobackBtn";
 import Stocks from "./Stocks";
 import CompanyDetails from "./CompanyDetails";
 import '../assets/stylesheets/lists.css';
+import '../assets/stylesheets/popular.css';
 
 const Popular = () => {
   const globalState = useSelector(state => state.popularReducer);
   const dispatch = useDispatch();
   const [localState, setLocalState] = useState([]);
   const [detailsOpen, setDetailsOpen] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
   const [targetSymbol, setTargetSymbol] = useState("");
 
   const openDetails = (e) => {
     setTargetSymbol(e.target.id);
     setDetailsOpen(true);
+    setTimeout(() => {
+      setPopupOpen(true);
+    }, 200)
   } 
 
   useEffect(() => {
@@ -25,6 +30,13 @@ const Popular = () => {
       setLocalState(globalState)
     }
   }, []);
+
+  const closeDetails = () => {
+    setPopupOpen(false);
+    setTimeout(() => {
+      setDetailsOpen(false)
+    }, 200);
+  };
   
   const filterTheStocks = (e) => {
     if(e.target.value === 'increasedInPrice'){
@@ -53,8 +65,8 @@ const Popular = () => {
       {detailsOpen 
       ? <CompanyDetails
         symbol={targetSymbol}
-        openClass={"open"}
-        closeFunction={() => setDetailsOpen(false)}
+        openClass={popupOpen ? "details-open" : ""}
+        closeFunction={closeDetails}
         />
         : null }
     </div>

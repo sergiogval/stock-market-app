@@ -19,7 +19,7 @@ const CompanyDetails = ({ symbol, closeFunction, openClass}) => {
         <h2>{globalState.name}</h2>
       </header>
       <div className={`company-stock-info ${globalState.changes >= 0 ? 'success' : 'fail'}`}>
-        <p>{globalState.symbol}</p>
+        <p>Ticker: {globalState.symbol}</p>
         <div>
          <span>Current Stock Price: USD{globalState.stockPrice}</span>
          <small>{`${globalState.changes >= 0 ? 'Incresed by +' : 'Decreased by: '} ${globalState.changes}`}</small>
@@ -30,7 +30,7 @@ const CompanyDetails = ({ symbol, closeFunction, openClass}) => {
           <img src={globalState.image} alt="" />
         </div>
         <div className="info-cont">
-          <p>{globalState.describtion}</p>
+          <p className="info-para">{globalState.describtion}</p>
           <p><b>IPO start date: </b>{globalState.ipoDate}</p>
         </div>
       </div>
