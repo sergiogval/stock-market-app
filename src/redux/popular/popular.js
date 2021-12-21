@@ -1,5 +1,5 @@
 const GET_DATA = 'popularStore/popular/GET_DATA';
-const apiUrl = 'https://financialmodelingprep.com/api/v3/actives?apikey=5e87fe6c4fd732f68a02d0cb98866397';
+const apiUrl = 'https://financialmodelingprep.com/api/v3/actives?apikey=1386ead7c02a1e4e52041120c7f7646a';
 let initialState = [];
 
 const populateState = (payload) => ({
