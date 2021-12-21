@@ -3,7 +3,7 @@ import GobakcBtn from "./GobackBtn";
 
 const Gainers = () => (
   <div>
-     <GobakcBtn />
+     <GobakcBtn path={'/'}/>
     <h1>Gainers</h1>
   </div>
 );

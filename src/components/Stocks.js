@@ -1,5 +1,6 @@
 import React from "react";
 import uniqid from 'uniqid';
+import { Link } from "react-router-dom";
 
 const Stocks = ({list}) => {
 
@@ -9,13 +10,15 @@ const Stocks = ({list}) => {
     <ul className="stockList">
       {list.map(stock => {
         return (
-          <li key={uniqid()}>
-            <p>{stock.name}</p>
-            <div className="stock-indicators">
-              <span className={stock.changes >= 0 ? "sucsess" : "fail"}>{stock.changes}</span>
-              <small>{calcPercentage(stock.changes, stock.currentPrice)} %</small>
-            </div>
-          </li>
+          <Link to="/popular/compDetails">
+            <li key={uniqid()}>
+              <p>{stock.name}</p>
+              <div className="stock-indicators">
+                <span className={stock.changes >= 0 ? "sucsess" : "fail"}>{stock.changes}</span>
+                <small>{calcPercentage(stock.changes, stock.currentPrice)} %</small>
+              </div>
+            </li>
+          </Link>
         )
       })}
     </ul>

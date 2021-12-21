@@ -32,7 +32,7 @@ const Popular = () => {
   return (
     <div>
       <header>
-        <GobakcBtn />
+        <GobakcBtn path={'/'}/>
         <h1>Popular stocks</h1>
         <select name="sort" id="sortPopular" onChange={filterTheStocks}>
           <option value="showAll">All</option>

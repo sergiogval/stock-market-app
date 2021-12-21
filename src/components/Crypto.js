@@ -3,7 +3,7 @@ import GobakcBtn from "./GobackBtn";
 
 const Crypto = () => (
   <div>
-    <GobakcBtn />
+    <GobakcBtn path={'/'}/>
     <h1>Crypto</h1>
   </div>
 );
