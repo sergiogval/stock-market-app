@@ -5,7 +5,6 @@ import Popular from './components/Popular';
 import Crypto from './components/Crypto';
 import Gainers from './components/Gainers';
 import Losers from './components/Losers';
-import CompanyDetails from './components/CompanyDetails';
 import './assets/stylesheets/App.css';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
           <Route path="/crypto" element={<Crypto />} />
           <Route path="/gainers" element={<Gainers />} />
           <Route path="/losers" element={<Losers />} />
-          <Route path="/popular/compDetails" element={<CompanyDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

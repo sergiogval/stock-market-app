@@ -3,11 +3,20 @@ import { useSelector, useDispatch } from "react-redux";
 import { getData } from "../redux/popular/popular";
 import GobakcBtn from "./GobackBtn";
 import Stocks from "./Stocks";
+import CompanyDetails from "./CompanyDetails";
+import '../assets/stylesheets/lists.css';
 
 const Popular = () => {
   const globalState = useSelector(state => state.popularReducer);
   const dispatch = useDispatch();
   const [localState, setLocalState] = useState([]);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const [targetSymbol, setTargetSymbol] = useState("");
+
+  const openDetails = (e) => {
+    setTargetSymbol(e.target.id);
+    setDetailsOpen(true);
+  } 
 
   useEffect(() => {
     if(!globalState.length){
@@ -30,7 +39,7 @@ const Popular = () => {
   };
 
   return (
-    <div>
+    <div className="popular-stock-container">
       <header>
         <GobakcBtn path={'/'}/>
         <h1>Popular stocks</h1>
@@ -40,7 +49,14 @@ const Popular = () => {
           <option value="decreasedInPrice">Fallen in price </option>
         </select>
       </header>
-      <Stocks list={localState.length ? localState : globalState} />
+      <Stocks list={localState.length ? localState : globalState}  viewDetails={openDetails}/>
+      {detailsOpen 
+      ? <CompanyDetails
+        symbol={targetSymbol}
+        openClass={"open"}
+        closeFunction={() => setDetailsOpen(false)}
+        />
+        : null }
     </div>
   )
 };

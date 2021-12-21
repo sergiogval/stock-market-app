@@ -1,8 +1,7 @@
 import React from "react";
 import uniqid from 'uniqid';
-import { Link } from "react-router-dom";
 
-const Stocks = ({list}) => {
+const Stocks = ({list, viewDetails}) => {
 
   const calcPercentage = (change, originalPrice) => Math.floor((change * 100) / (Number(originalPrice) + (-1 * change)));
   
@@ -10,15 +9,16 @@ const Stocks = ({list}) => {
     <ul className="stockList">
       {list.map(stock => {
         return (
-          <Link to="/popular/compDetails">
-            <li key={uniqid()}>
-              <p>{stock.name}</p>
+            <li key={uniqid()} id={stock.ticker} onClick={viewDetails}>
+              <div className="stock-name">
+                <p>{stock.name}</p>
+                <small>{stock.ticker}</small>
+              </div>
               <div className="stock-indicators">
-                <span className={stock.changes >= 0 ? "sucsess" : "fail"}>{stock.changes}</span>
-                <small>{calcPercentage(stock.changes, stock.currentPrice)} %</small>
+                <span className={stock.changes >= 0 ? "success" : "fail"}>{stock.changes}</span>
+                <small className={stock.changes >= 0 ? "percentageSuccess" : "percentageFail"}>{calcPercentage(stock.changes, stock.currentPrice)} %</small>
               </div>
             </li>
-          </Link>
         )
       })}
     </ul>

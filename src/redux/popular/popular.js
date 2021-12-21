@@ -16,7 +16,7 @@ export const getData = () => (dispatch) => fetch(apiUrl)
       currentPrice: company.price,
       ticker: company.ticker,
       difPercentage: company.changesPercentage,
-      changes: company.changes
+      changes: company.changes,
     };
 
     dispatch(populateState(newCompany));

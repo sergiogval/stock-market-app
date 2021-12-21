@@ -2,11 +2,11 @@ import { createStore, combineReducers, applyMiddleware } from "redux";
 import logger from "redux-logger";
 import thunk from "redux-thunk";
 import popularReducer from './popular/popular';
-import compayReducser from './company/company';
+import companyReducer from './company/company';
 
 const reducer = combineReducers({
   popularReducer,
-  compayReducser,
+  companyReducer,
 });
 
 const store = createStore(
