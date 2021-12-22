@@ -10,22 +10,13 @@ const populateState = (payload) => ({
 export const getAll = () => (dispatch) => fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
-    for (let i = 0; i < 500; i += 1) {
-      const newCompany = {
-        name: data[i].name,
-        currentPrice: data[i].price,
-        ticker: data[i].symbol,
-      };
-      dispatch(populateState(newCompany));
-    }
+    dispatch(populateState(data.slice(0, 1000)));
   });
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_DATA:
-      return [
-        ...state, action.payload,
-      ];
+      return action.payload;
     default:
       return state;
   }
