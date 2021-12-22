@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { getCompany } from '../redux/company/company';
 
 const CompanyDetails = ({ symbol, closeFunction, openClass }) => {
@@ -8,13 +9,12 @@ const CompanyDetails = ({ symbol, closeFunction, openClass }) => {
 
   useEffect(() => {
     dispatch(getCompany(symbol));
-    console.log(globalState);
   }, []);
 
   return (
     <div className={`stock-details ${openClass}`}>
       <header className="st-header">
-        <button className="backBtn" onClick={closeFunction}>⬅ </button>
+        <button type="button" className="backBtn" onClick={closeFunction}>⬅ </button>
         <h2>{globalState.name}</h2>
       </header>
       <div className={`company-stock-info ${globalState.changes >= 0 ? 'success' : 'fail'}`}>
@@ -44,6 +44,12 @@ const CompanyDetails = ({ symbol, closeFunction, openClass }) => {
       </div>
     </div>
   );
+};
+
+CompanyDetails.propTypes = {
+  symbol: PropTypes.element.isRequired,
+  closeFunction: PropTypes.element.isRequired,
+  openClass: PropTypes.element.isRequired,
 };
 
 export default CompanyDetails;

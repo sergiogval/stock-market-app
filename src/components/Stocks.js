@@ -1,8 +1,11 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import uniqid from 'uniqid';
+import PropTypes from 'prop-types';
 
 const Stocks = ({ list, viewDetails }) => {
-  const calcPercentage = (change, originalPrice) => Math.floor((change * 100) / (Number(originalPrice) + (-1 * change)));
+  const calcPercentage = (ch, p) => Math.floor((ch * 100) / (Number(p) + (-1 * ch)));
 
   return (
     <ul className="stockList">
@@ -24,6 +27,11 @@ const Stocks = ({ list, viewDetails }) => {
       ))}
     </ul>
   );
+};
+
+Stocks.propTypes = {
+  list: PropTypes.element.isRequired,
+  viewDetails: PropTypes.element.isRequired,
 };
 
 export default Stocks;
