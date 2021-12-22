@@ -1,5 +1,5 @@
 const GET_DATA = 'loserStore/losers/GET_DATA';
-const apiUrl = 'https://financialmodelingprep.com/api/v3/losers?apikey=d2e40ce5ce94299d6d3d24b21e4d4696';
+const apiUrl = 'https://financialmodelingprep.com/api/v3/losers?apikey=5e87fe6c4fd732f68a02d0cb98866397';
 const initialState = [];
 
 const populateState = (payload) => ({
