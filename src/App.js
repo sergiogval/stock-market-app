@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Popular from './components/Popular';
 import Gainers from './components/Gainers';
 import Losers from './components/Losers';
+import AllStocks from './components/AllStocks';
 import './assets/stylesheets/App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/popular" element={<Popular />} />
           <Route path="/gainers" element={<Gainers />} />
           <Route path="/losers" element={<Losers />} />
+          <Route path="/allstocks" element={<AllStocks />} />
         </Routes>
       </BrowserRouter>
     </div>

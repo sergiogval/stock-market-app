@@ -13,6 +13,9 @@ const Nav = () => (
       <Link to="/losers" className="navLink">
         <li>Losers</li>
       </Link>
+      <Link to="/allstocks" className="navLink">
+        <li>All Stocks</li>
+      </Link>
     </ul>
   </nav>
 );
