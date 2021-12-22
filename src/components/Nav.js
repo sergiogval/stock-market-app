@@ -7,9 +7,6 @@ const Nav = () => (
       <Link to="/popular" className="navLink">
         <li>Popular</li>
       </Link>
-      <Link to="/crypto" className="navLink">
-        <li>Crypo</li>
-      </Link>
       <Link to="/gainers" className="navLink">
         <li>Gainers</li>
       </Link>
