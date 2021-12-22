@@ -41,15 +41,18 @@ const AllStocks = () => {
     }, 200);
   };
 
-  // const filterTheStocks = (e) => {
-  //   if (e.target.value === 'increasedInPrice') {
-  //     setLocalState(globalState.filter(((stock) => stock.changes >= 0)));
-  //   } else if (e.target.value === 'decreasedInPrice') {
-  //     setLocalState(globalState.filter(((stock) => stock.changes < 0)));
-  //   } else {
-  //     setLocalState(globalState);
-  //   }
-  // };
+  const filterTheStocks = (e) => {
+    if (e.target.value === '') {
+      setLocalState(globalState);
+    } else {
+      setLocalState(
+        localState.filter((stock) => {
+          const regex = new RegExp(e.target.value, 'gi');
+          return stock.ticker.match(regex) || stock.name.match(regex);
+        }),
+      );
+    }
+  };
 
   return (
     <div className="all-stocks-container">
@@ -60,7 +63,7 @@ const AllStocks = () => {
           <small>Number of stocks: </small>
           <small>{localState.length}</small>
         </hgroup>
-        <input type="text" placeholder="Search by stock symbol..." />
+        <input type="text" placeholder="Search by stock symbol..." onChange={filterTheStocks} onKeyUp={filterTheStocks} />
       </header>
       <div className="main">
         <ul>
