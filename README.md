@@ -5,6 +5,7 @@
 > This app provides information about U.S stock market.
 
 ![screenshot](./src/assets/images/screen.png)
+![screenshot](./src/assets/images/screen2.png)
 
 Stock Market is designed to allow clients to get the latest and the all essential information about the stocks (up to 1000) that are traded in the US stock market. The app allows users to select the stocks by categories and filter the stocks by different parameters as well as to search for specific stock using the search bar by ticker or company name. All data is fetched from [FMP](https://site.financialmodelingprep.com/developer/docs)
 
