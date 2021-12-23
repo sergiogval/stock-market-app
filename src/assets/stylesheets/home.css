@@ -1,0 +1,63 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+.main-header {
+  background: url(../images/logo.png) 50% 50% no-repeat;
+  background-size: 400px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: var(--base-font);
+  color: white;
+}
+
+.main-sub-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.main-nav .navLink {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  text-decoration: none;
+}
+
+.main-nav .navLink li {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background: url(../images/arrow-right.svg) 90% 10% no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: var(--base-font);
+  font-weight: 800;
+  color: white;
+}
+
+.main-nav ul > *:nth-child(even) {
+  background-color: var(--base);
+
+}
