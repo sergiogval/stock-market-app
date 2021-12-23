@@ -4,12 +4,18 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: var(--first);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr;
   transition: all 0.3s;
-  transform: translateX(100%)
+  transform: translateX(100%);
+}
+
+.stock-details .st-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 10px 0;
 }
 
 .details-open {
@@ -41,7 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(216, 216, 216);
+  background: var(--base);
 }
 
 .company-details .image-cont img {

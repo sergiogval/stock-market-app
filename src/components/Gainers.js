@@ -50,12 +50,12 @@ const Gainers = () => {
   };
 
   return (
-    <div className="popular-stock-container">
-      <header>
+    <div className="popular-stock-container gainer-loser-container">
+      <header className="gainer-main-header">
         <GobakcBtn path="/" />
-        <h1>Loser stocks</h1>
-        <select name="sort" id="sortPopular" onChange={filterTheStocks}>
-          <option value="showAll">Not sorted</option>
+        <h1>Gainer stocks</h1>
+        <select name="sort" value="showAll" id="sortPopular" onChange={filterTheStocks} disabled>
+          <option value="showAll">Sorting filter is under construction</option>
           <option value="lowestToHighiest">Lowest to Highest</option>
           <option value="highiestToLowest">Highest to Lowest </option>
         </select>

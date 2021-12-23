@@ -1,12 +1,12 @@
 .main-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 1fr 1fr auto;
 }
 
 .main-header {
   background: url(../images/logo.png) 50% 50% no-repeat;
-  background-size: 400px;
+  background-size: 95%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@
   align-items: flex-end;
   font-family: var(--base-font);
   color: white;
+  text-transform: uppercase;
 }
 
 .main-sub-header {
@@ -21,6 +22,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+}
+
+.main-inner-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #2e4b8088;
+  color: rgb(160, 160, 160);
 }
 
 .main-nav {
@@ -45,11 +58,9 @@
 .main-nav .navLink li {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
   background: url(../images/arrow-right.svg) 90% 10% no-repeat;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   padding: 10px;
   text-transform: uppercase;
   font-family: var(--base-font);
@@ -57,7 +68,26 @@
   color: white;
 }
 
-.main-nav ul > *:nth-child(even) {
-  background-color: var(--base);
+.main-nav .navLink li > *:last-child {
+  justify-self: end;
+}
 
+.main-nav .navLink li img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-nav .navLink .first-color {
+  background-color: var(--base);
+}
+
+.main-nav .navLink .second-color {
+  background-color: var(--second);
+}
+
+.footer {
+  padding: 2px;
+  font-family: var(--base-font);
+  color: rgb(160, 160, 160);
+  background: var(--last);
 }

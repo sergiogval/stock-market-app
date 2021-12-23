@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const GobakcBtn = ({ path }) => (
   <Link to={path}>
-    <button type="button">⬅ </button>
+    <button className="gobackBtn" type="button"> </button>
   </Link>
 );
 

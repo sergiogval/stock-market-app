@@ -2,14 +2,27 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
-  grid-gap: 20px;
+  font-family: var(--base-font);
+  color: white;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 300px auto;
   align-items: center;
+}
+
+header h1 {
+  justify-self: end;
   padding: 10px;
+  text-transform: uppercase;
+}
+
+header select {
+  border: none;
+  background: var(--last);
+  color: white
 }
 
 ul {
@@ -27,8 +40,13 @@ li {
 }
 
 li:nth-child(odd) {
-  background: rgb(204, 204, 204);
+  background: var(--base);
 }
+
+li:nth-child(even) {
+  background: var(--second);
+}
+
 
 .stock-name {
   display: flex;
@@ -59,9 +77,58 @@ li:nth-child(odd) {
 }
 
 .percentageSuccess {
-  color: green;
+  color: rgb(83, 209, 146);
 }
 
 .percentageFail {
-  color: red;
+  color: tomato;
+}
+
+.pop-main-header {
+  background: url(../images/paid.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.gainer-loser-container {
+  background: var(--base);
+}
+
+.all-main-header hgroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.all-main-header hgroup h1 {
+  padding: 0;
+}
+
+.all-main-header {
+  background: url(../images/account_balance.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.all-main-header input {
+  border: none;
+  background: var(--last);
+  color: white;
+  padding: 10px 0;
+}
+
+.gainer-main-header {
+  background: url(../images/trending_up.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.loser-main-header {
+  background: url(../images/trending_down.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.gobackBtn {
+  padding: 20px;
+  background: transparent url(../images/arrow_back.svg) 50% 50% no-repeat;
+  border: none;
 }

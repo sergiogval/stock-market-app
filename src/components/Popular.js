@@ -50,8 +50,10 @@ const Popular = () => {
 
   return (
     <div className="popular-stock-container">
-      <header>
-        <GobakcBtn path="/" />
+      <header className="pop-main-header">
+        <div className="sub-inner-header">
+          <GobakcBtn path="/" />
+        </div>
         <h1>Popular stocks</h1>
         <select name="sort" id="sortPopular" onChange={filterTheStocks}>
           <option value="showAll">All</option>

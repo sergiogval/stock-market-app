@@ -55,15 +55,17 @@ const AllStocks = () => {
   };
 
   return (
-    <div className="all-stocks-container">
-      <header>
+    <div className="popular-stock-container all-stocks-container">
+      <header className="all-main-header">
         <GobakcBtn path="/" />
         <hgroup>
           <h1>All stocks</h1>
-          <small>Number of stocks: </small>
-          <small>{localState.length}</small>
+          <div className="all-stoct-count">
+            <small>Number of stocks: </small>
+            <small>{localState.length}</small>
+          </div>
         </hgroup>
-        <input type="text" placeholder="Search by stock symbol..." onChange={filterTheStocks} onKeyUp={filterTheStocks} />
+        <input type="text" placeholder="Search by stock symbol or company name..." onChange={filterTheStocks} onKeyUp={filterTheStocks} />
       </header>
       <div className="main">
         <ul>

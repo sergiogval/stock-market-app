@@ -14,7 +14,7 @@ const CompanyDetails = ({ symbol, closeFunction, openClass }) => {
   return (
     <div className={`stock-details ${openClass}`}>
       <header className="st-header">
-        <button type="button" className="backBtn" onClick={closeFunction}>⬅ </button>
+        <button type="button" className="gobackBtn" onClick={closeFunction}> </button>
         <h2>{globalState.name}</h2>
       </header>
       <div className={`company-stock-info ${globalState.changes >= 0 ? 'success' : 'fail'}`}>
