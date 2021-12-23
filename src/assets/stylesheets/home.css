@@ -91,3 +91,12 @@
   color: rgb(160, 160, 160);
   background: var(--last);
 }
+
+.footer small {
+  font-size: 10px;
+}
+
+.footer small a {
+  text-decoration: none;
+  color: lightblue;
+}
