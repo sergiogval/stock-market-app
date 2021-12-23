@@ -65,3 +65,16 @@
   text-align: justify;
   line-height: 25px;
 }
+
+@media (min-width: 700px) {
+  .stock-details {
+    align-items: start;
+  }
+
+  .company-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+  }
+}

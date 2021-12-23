@@ -100,3 +100,18 @@
   text-decoration: none;
   color: lightblue;
 }
+
+@media (min-width: 700px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .footer {
+    grid-column: 1 / -1;
+  }
+
+  .main-inner-header {
+    right: 50%;
+  }
+}

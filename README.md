@@ -16,7 +16,7 @@ Stock Market is designed to allow clients to get the latest and the all essentia
 
 ## Live Demo
 
-[Live Demo](https://s-travelers-hub.netlify.app/)
+[Live Demo](https://hope-stock-market.netlify.app/)
 
 ## Getting Started
 
