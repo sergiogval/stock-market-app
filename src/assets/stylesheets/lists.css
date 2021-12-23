@@ -22,7 +22,7 @@ header h1 {
 header select {
   border: none;
   background: var(--last);
-  color: white
+  color: white;
 }
 
 ul {
@@ -46,7 +46,6 @@ li:nth-child(odd) {
 li:nth-child(even) {
   background: var(--second);
 }
-
 
 .stock-name {
   display: flex;
