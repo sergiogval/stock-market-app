@@ -4,6 +4,10 @@
   grid-template-rows: 1fr 1fr auto;
 }
 
+.search-mode {
+  grid-template-rows: 300px 1fr auto;
+}
+
 .main-header {
   background: url(../images/logo.png) 50% 50% no-repeat;
   background-size: 95%;
@@ -116,7 +120,7 @@
   transition: all 1s;
 }
 
-.main-search-bar-int  {
+.main-search-bar-int {
   background: transparent url(../images/search.svg) 1% 50% no-repeat;
   border: none;
   padding: 10px 40px;
