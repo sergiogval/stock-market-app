@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import uniqid from 'uniqid';
@@ -70,7 +68,7 @@ const AllStocks = () => {
       <div className="main">
         <ul>
           {localState.map((stock) => (
-            <li key={uniqid()} id={stock.symbol} onClick={openDetails}>
+            <button key={uniqid} type="button" className="single-stock" id={stock.symbol} onClick={openDetails}>
               <div id={stock.symbol} className="all-stock-info">
                 <p id={stock.symbol}>{stock.name}</p>
                 <small id={stock.symbol}>{stock.symbol}</small>
@@ -79,7 +77,7 @@ const AllStocks = () => {
                 USD
                 {stock.price}
               </h3>
-            </li>
+            </button>
           ))}
         </ul>
       </div>
