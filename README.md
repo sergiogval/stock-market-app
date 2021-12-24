@@ -18,6 +18,7 @@ Stock Market is designed to allow clients to get the latest and the all essentia
 ## Live Demo
 
 [Live Demo](https://hope-stock-market.netlify.app/)
+[Video Presentation](https://www.loom.com/share/94c6374a9bd6482dbc9786c773e7b653)
 
 ## Getting Started
 
