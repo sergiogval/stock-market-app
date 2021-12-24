@@ -29,8 +29,8 @@
   top: 0;
   right: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   padding: 10px;
   background: #2e4b8088;
   color: rgb(160, 160, 160);
@@ -88,7 +88,7 @@
 .footer {
   padding: 2px;
   font-family: var(--base-font);
-  color: rgb(160, 160, 160);
+  color: #9c9c9c;
   background: var(--last);
 }
 
@@ -99,6 +99,57 @@
 .footer small a {
   text-decoration: none;
   color: lightblue;
+}
+
+.searchBtn {
+  background: transparent url(../images/search.svg) 50% 50% no-repeat;
+  padding: 10px;
+  border: none;
+}
+
+.main-search-bar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  overflow-y: hidden;
+  width: 0;
+  transition: all 1s;
+}
+
+.main-search-bar-int  {
+  background: transparent url(../images/search.svg) 1% 50% no-repeat;
+  border: none;
+  padding: 10px 40px;
+  color: #9c9c9c;
+  border-bottom: 1px solid #9c9c9c;
+}
+
+.main-search-bar-int:focus {
+  outline: none;
+}
+
+.hideSearchBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: #9c9c9c;
+}
+
+.search-is-on {
+  width: auto;
+}
+
+.inner-header-default {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inner-header-search {
+  display: none;
 }
 
 @media (min-width: 700px) {
