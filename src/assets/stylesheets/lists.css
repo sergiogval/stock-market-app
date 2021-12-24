@@ -1,0 +1,152 @@
+.popular-stock-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  font-family: var(--base-font);
+  color: white;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 300px auto;
+  align-items: center;
+}
+
+header h1 {
+  justify-self: end;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+header select {
+  border: none;
+  background: var(--last);
+  color: white;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.single-stock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  color: white;
+  background: var(--base);
+}
+
+li:nth-child(odd) {
+  background: var(--base);
+}
+
+.single-stock:nth-child(even) {
+  background: var(--second);
+}
+
+.all-stock-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.all-stock-info p {
+  text-align: left;
+}
+
+.all-stock-info small {
+  color: rgb(206, 206, 206);
+}
+
+.stock-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stock-indicators {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.success {
+  background: rgb(83, 209, 146);
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.fail {
+  background: tomato;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.percentageSuccess {
+  color: rgb(83, 209, 146);
+}
+
+.percentageFail {
+  color: tomato;
+}
+
+.pop-main-header {
+  background: url(../images/paid.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.gainer-loser-container {
+  background: var(--base);
+}
+
+.all-main-header hgroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.all-main-header hgroup h1 {
+  padding: 0;
+}
+
+.all-main-header {
+  background: url(../images/account_balance.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.all-main-header input {
+  border: none;
+  background: var(--last);
+  color: white;
+  padding: 10px 0;
+}
+
+.gainer-main-header {
+  background: url(../images/trending_up.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.loser-main-header {
+  background: url(../images/trending_down.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
+.gobackBtn {
+  padding: 20px;
+  background: transparent url(../images/arrow_back.svg) 50% 50% no-repeat;
+  border: none;
+}
