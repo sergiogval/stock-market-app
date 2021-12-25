@@ -169,4 +169,13 @@
   .main-inner-header {
     right: 50%;
   }
-}
+
+  .search-mode {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh;
+  }
+
+  .home-main {
+    overflow-y: scroll;
+  } 
+} 

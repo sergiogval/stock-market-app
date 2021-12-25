@@ -12,8 +12,8 @@ const Header = ({
     const hour = now.getHours();
     const minutes = now.getMinutes();
 
-    setHour(hour);
-    setMinutes(minutes);
+    setHour(hour < 10 ? `0${hour}` : hour);
+    setMinutes(minutes < 10 ? `0${minutes}` : minutes);
   };
 
   const updateTime = () => {
