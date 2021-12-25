@@ -150,3 +150,7 @@ li:nth-child(odd) {
   background: transparent url(../images/arrow_back.svg) 50% 50% no-repeat;
   border: none;
 }
+
+.gobackBtn:hover {
+  cursor: pointer;
+}
